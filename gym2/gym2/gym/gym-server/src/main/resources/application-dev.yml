@@ -1,0 +1,27 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/gym_db?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai&createDatabaseIfNotExist=true
+    username: root
+    password: 123456
+
+  data:
+    redis:
+      host: localhost
+      port: 6379
+      database: 0
+      timeout: 3000ms
+      lettuce:
+        pool:
+          max-active: 8
+          max-idle: 8
+          min-idle: 0
+
+  sql:
+    init:
+      mode: never
+
+# DeepSeek AI 配置（直接调用 OpenAI 兼容 API）
+deepseek:
+  api-key: sk-0b51286b6f3b4f5b908475112938f2eb
+  base-url: https://api.deepseek.com
